@@ -7,8 +7,9 @@ brew cleanup -s
 #now diagnotic
 brew doctor
 brew missing
-echo “you can hit mas upgrade to upgrade theses apps from the app store:”
-mas outdated
-echo “install with: mas upgrade”
+#echo "you can hit mas upgrade to upgrade theses apps from the app store:"
+#mas outdated
+mas upgrade
 npm update -g
-echo “and pip ? pip freeze — local | grep -v ‘^\-e’ | cut -d = -f 1 | xargs pip install -U “
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U
